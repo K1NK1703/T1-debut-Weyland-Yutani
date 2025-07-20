@@ -1,9 +1,14 @@
 server:
-  port: 8080
+  port: 8081
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
 
 spring:
   application:
-    name: synthetic-human-core-starter
+    name: bishop-prototype
 
   profiles:
     active: local
@@ -21,7 +26,7 @@ spring:
       mode: CONSOLE
       kafka:
         bootstrap-servers: localhost:9092
-        topic: synthetic-audit
+        topic: bishop-audit
     command:
       queue:
         max-size: 1000
@@ -48,11 +53,15 @@ management:
 
 logging:
   level:
+    ru.romanov.weyland.yutani.bishop: DEBUG
     ru.romanov.weyland.yutani.synthetic: INFO
     org.springframework.kafka: WARN
     org.springframework.aop: DEBUG
+  charset:
+    console: UTF-8
+    file: UTF-8
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
     file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
   file:
-    name: logs/synthetic-human.log
+    name: logs/bishop-prototype.log

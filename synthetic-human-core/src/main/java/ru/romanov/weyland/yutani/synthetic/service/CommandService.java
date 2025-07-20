@@ -13,9 +13,9 @@ import org.springframework.stereotype.Service;
 import ru.romanov.weyland.yutani.synthetic.audit.WeylandWatchingYou;
 import ru.romanov.weyland.yutani.synthetic.exception.CommandQueueOverflowException;
 import ru.romanov.weyland.yutani.synthetic.model.Command;
-import ru.romanov.weyland.yutani.synthetic.utils.AuditLevel;
-import ru.romanov.weyland.yutani.synthetic.utils.CommandStatus;
-import ru.romanov.weyland.yutani.synthetic.utils.Priority;
+import ru.romanov.weyland.yutani.synthetic.model.AuditLevel;
+import ru.romanov.weyland.yutani.synthetic.model.CommandStatus;
+import ru.romanov.weyland.yutani.synthetic.model.Priority;
 
 import java.time.LocalDateTime;
 import java.util.Map;

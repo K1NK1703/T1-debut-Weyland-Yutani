@@ -64,7 +64,7 @@ public class AuditService {
     private void sendToConsole(AuditDTO auditDto) {
         StringBuilder sb = new StringBuilder(
                 String.format("""
-                               ----------------------------------------------------------
+                               %n----------------------------------------------------------
                                Время: %s
                                Метод: %s
                                Описание: %s
@@ -93,7 +93,7 @@ public class AuditService {
             sb.append(String.format("%nОшибка: %s", auditDto.errorMessage()));
         }
 
-        sb.append("----------------------------------------------------------");
+        sb.append("\n----------------------------------------------------------");
         log.info(sb.toString());
     }
 }

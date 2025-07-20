@@ -94,6 +94,11 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorResponseDTO> handleGenericException(Exception ex) {
 
+        if (ex instanceof org.springframework.web.servlet.resource.NoResourceFoundException
+                && ex.getMessage().contains("favicon.ico")) {
+            return null;
+        }
+
         ErrorResponseDTO errorResponseDTO = new ErrorResponseDTO(
                 "INTERNAL_ERROR",
                 "Внутренняя ошибка системы синтетиков",

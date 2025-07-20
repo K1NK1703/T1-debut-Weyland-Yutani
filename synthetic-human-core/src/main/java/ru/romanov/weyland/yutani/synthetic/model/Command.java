@@ -9,8 +9,7 @@ import lombok.Setter;
 import lombok.ToString;
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
-import ru.romanov.weyland.yutani.synthetic.utils.CommandStatus;
-import ru.romanov.weyland.yutani.synthetic.utils.Priority;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -35,7 +34,8 @@ public class Command {
     String author;
 
     @NotNull(message = "Время назначения команды обязательно")
-    @JsonFormat(pattern = "dd-MM-yyyy'T'HH:mm:ss")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy'T'HH:mm:ss")
+    @DateTimeFormat(pattern = "dd-MM-yyyy'T'HH:mm:ss")
     private LocalDateTime time;
 
     CommandStatus status;

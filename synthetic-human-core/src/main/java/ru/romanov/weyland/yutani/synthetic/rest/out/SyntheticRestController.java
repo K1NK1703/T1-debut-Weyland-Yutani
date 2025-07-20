@@ -12,7 +12,7 @@ import ru.romanov.weyland.yutani.synthetic.dto.response.SyntheticMetricsResponse
 import ru.romanov.weyland.yutani.synthetic.dto.response.SyntheticStatusResponseDTO;
 import ru.romanov.weyland.yutani.synthetic.model.Command;
 import ru.romanov.weyland.yutani.synthetic.service.CommandService;
-import ru.romanov.weyland.yutani.synthetic.utils.AuditLevel;
+import ru.romanov.weyland.yutani.synthetic.model.AuditLevel;
 
 import java.time.LocalDateTime;
 import java.util.Map;
@@ -108,9 +108,7 @@ public class SyntheticRestController {
     @PostMapping("/test/audit")
     @WeylandWatchingYou(
             description = "Тестовый метод для демонстрации аудита",
-            level = AuditLevel.HIGH,
-            includeParameters = true,
-            includeResult = true
+            level = AuditLevel.HIGH
     )
     public ResponseEntity<String> testAudit(@RequestBody Map<String, Object> testData) {
         log.info("Тестовый вызов аудита с данными: {}", testData);

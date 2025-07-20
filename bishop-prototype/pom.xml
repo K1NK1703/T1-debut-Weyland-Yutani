@@ -13,7 +13,7 @@
     <artifactId>bishop-prototype</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <name>bishop-prototype</name>
-    <description>Project Bishop - Prototype service for testing</description>
+    <description>Synthetic Human Emulator for Project Bishop</description>
 
     <properties>
         <java.version>23</java.version>
@@ -24,26 +24,6 @@
             <groupId>ru.romanov</groupId>
             <artifactId>synthetic-human-core-starter</artifactId>
             <version>1.0.0-OMEGA</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
     </dependencies>
 

@@ -1,6 +1,6 @@
 package ru.romanov.weyland.yutani.synthetic.audit;
 
-import ru.romanov.weyland.yutani.synthetic.utils.AuditLevel;
+import ru.romanov.weyland.yutani.synthetic.model.AuditLevel;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

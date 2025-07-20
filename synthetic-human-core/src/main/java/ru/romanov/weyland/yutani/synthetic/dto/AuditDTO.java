@@ -1,7 +1,7 @@
 package ru.romanov.weyland.yutani.synthetic.dto;
 
 import lombok.Builder;
-import ru.romanov.weyland.yutani.synthetic.utils.AuditLevel;
+import ru.romanov.weyland.yutani.synthetic.model.AuditLevel;
 
 import java.time.LocalDateTime;
 

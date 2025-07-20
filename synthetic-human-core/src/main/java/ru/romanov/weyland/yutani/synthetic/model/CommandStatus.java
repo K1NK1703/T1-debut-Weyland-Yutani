@@ -1,4 +1,4 @@
-package ru.romanov.weyland.yutani.synthetic.utils;
+package ru.romanov.weyland.yutani.synthetic.model;
 
 import lombok.Getter;
 
